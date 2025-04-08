@@ -31,7 +31,7 @@ object TextPlaceholderAPIExtras : ModInitializer {
             val player = ctx.player!!
             var completed = 0
             for (advancement in player.server.advancementLoader.advancements) {
-                if (player.advancementTracker.getProgress(advancement).isDone()) {
+                if (!advancement.value.display.isEmpty && player.advancementTracker.getProgress(advancement).isDone()) {
                     completed++
                 }
             }
