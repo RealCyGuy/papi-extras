@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "papi-extras",
+	"version": "${version}",
+	"name": "Text Placeholder API Extras",
+	"description": "A few extra placeholders for Text Placeholder API such as advancement count and biome!",
+	"authors": [
+		"Cyrus Yip"
+	],
+	"contact": {
+		"homepage": "https://github.com/RealCyGuy/papi-extras",
+		"sources": "https://github.com/RealCyGuy/papi-extras"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/papi-extras/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "cyrusyip.papiextras.TextPlaceholderAPIExtras",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"placeholder-api": "2.6.2+1.21.5"
+	},
+	"suggests": {}
+}
