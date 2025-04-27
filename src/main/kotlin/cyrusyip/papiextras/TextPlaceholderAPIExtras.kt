@@ -17,7 +17,7 @@ object TextPlaceholderAPIExtras : ModInitializer {
 
             val entity = ctx.entity!!
             val biomeEntry = entity.world.getBiome(entity.blockPos)
-            val biomeId = entity.world.registryManager.getOrThrow(RegistryKeys.BIOME).getId(biomeEntry.value())
+            val biomeId = entity.world.registryManager.get(RegistryKeys.BIOME).getId(biomeEntry.value())
             val words = biomeId?.path.toString().split("_")
             PlaceholderResult.value(words.joinToString(" ") {
                 it.lowercase().replaceFirstChar { char -> char.titlecase() }
