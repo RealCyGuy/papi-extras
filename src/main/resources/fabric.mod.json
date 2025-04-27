@@ -11,7 +11,7 @@
 		"homepage": "https://github.com/RealCyGuy/papi-extras",
 		"sources": "https://github.com/RealCyGuy/papi-extras"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/papi-extras/icon.png",
 	"environment": "*",
 	"entrypoints": {
