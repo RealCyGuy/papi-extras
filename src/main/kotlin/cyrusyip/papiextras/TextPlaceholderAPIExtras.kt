@@ -1,11 +1,11 @@
 package cyrusyip.papiextras
 
-import net.fabricmc.api.ModInitializer
-import org.slf4j.LoggerFactory
-import eu.pb4.placeholders.api.Placeholders
 import eu.pb4.placeholders.api.PlaceholderResult
+import eu.pb4.placeholders.api.Placeholders
+import net.fabricmc.api.ModInitializer
 import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
+import org.slf4j.LoggerFactory
 
 object TextPlaceholderAPIExtras : ModInitializer {
     private val logger = LoggerFactory.getLogger("papi-extras")
