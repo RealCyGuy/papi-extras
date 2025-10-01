@@ -16,8 +16,8 @@ object TextPlaceholderAPIExtras : ModInitializer {
                 return@register PlaceholderResult.invalid("No entity!")
 
             val entity = ctx.entity!!
-            val biomeEntry = entity.world.getBiome(entity.blockPos)
-            val biomeId = entity.world.registryManager.getOrThrow(RegistryKeys.BIOME).getId(biomeEntry.value())
+            val biomeEntry = entity.entityWorld.getBiome(entity.blockPos)
+            val biomeId = entity.entityWorld.registryManager.getOrThrow(RegistryKeys.BIOME).getId(biomeEntry.value())
             val words = biomeId?.path.toString().split("_")
             PlaceholderResult.value(words.joinToString(" ") {
                 it.lowercase().replaceFirstChar { char -> char.titlecase() }
@@ -30,7 +30,7 @@ object TextPlaceholderAPIExtras : ModInitializer {
 
             val player = ctx.player!!
             var completed = 0
-            for (advancement in player.server!!.advancementLoader.advancements) {
+            for (advancement in ctx.server.advancementLoader.advancements) {
                 if (!advancement.value.display.isEmpty && player.advancementTracker.getProgress(advancement).isDone()) {
                     completed++
                 }
